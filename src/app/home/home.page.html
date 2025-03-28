@@ -7,15 +7,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- Loop through 'myMovies' array to display each movie as a card -->
   <ion-card *ngFor="let x of myMovies">
-    <img  src={{x.Poster}}>/>
+    <!-- Incorrect closing tag (/> at the end). Should be a normal self-closing tag -->
+    <img src="{{x.Poster}}"> 
+    
     <ion-card-header>
+      <!-- Display movie title -->
       <ion-card-title> {{x.Title}}</ion-card-title>
+      <!-- Display movie release year -->
       <ion-card-subtitle>{{x.Year}}</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
+      <!-- Placeholder content, consider adding actual movie details -->
       Here's a small text description for the card content. Nothing more, nothing less.
     </ion-card-content>
   </ion-card>
 </ion-content>
+
